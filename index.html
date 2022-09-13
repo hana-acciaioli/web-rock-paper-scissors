@@ -6,9 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-        <!-- title and favicon -->
-        <title>Web App</title>
-        <link rel="icon" type="image/x-icon" href="/assets/alchemy-favicon.png" />
+        <title>Hana's RPC App</title>
 
         <!-- js -->
         <script type="module" src="app.js"></script>
@@ -28,9 +26,32 @@
 
     <body>
         <header>
-            <h1>Rock, Paper, Scissors</h1>
+            <h1>Rock Paper Scissors</h1>
         </header>
 
-        <main></main>
+        <main>
+            <section>
+                <h2>Scoreboard</h2>
+                <p class="scoreboard">
+                    user wins:
+                    <span id="flips-display"></span>
+                    ghost wins:
+                    <span id="wins-display"></span>
+                    draws:
+                    <span id="draws-display"></span>
+                </p>
+            </section>
+            <section id="guessState" class="hide">
+                <p>You choose..</p>
+                <button id="rock">rock</button>
+                <button id="paper">paper</button>
+                <button id="scissors">scissors</button>
+            </section>
+            <section id="resultsState">
+                <h2>Your Choice: <span id="user-guess-display"></span></h2>
+                <h2>Ghost Choice: <span id="ghost-guess-display"></span></h2>
+                <h2>Result: <span id="result"></span></h2>
+            </section>
+        </main>
     </body>
 </html>

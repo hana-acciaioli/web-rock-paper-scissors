@@ -7,7 +7,7 @@ const rock = document.getElementById('rock');
 const paper = document.getElementById('paper');
 const scissors = document.getElementById('scissors');
 let userGuess;
-// let gameState = 'resultState';
+let gameState = '';
 
 const userGuessDisplay = document.getElementById('user-guess-display');
 const ghostGuessDisplay = document.getElementById('ghost-guess-display');
@@ -24,15 +24,15 @@ const ghostGuess = ['rock', 'paper', 'scissors'];
 
 /* Actions */
 function loadPage() {
-    // displayGuess();
-    // displayResults();
+    displayGuess();
+    displayResults();
     displayScoreboard();
 }
 
 rock.addEventListener('click', () => {
     const randNum = Math.floor(Math.random() * ghostGuess.length);
     ghostGuessDisplay.textContent = ghostGuess[randNum];
-    // gameState = resultState;
+    gameState = 'resultsState';
     userGuess = 'rock';
     userGuessDisplay.textContent = 'rock';
 
@@ -44,7 +44,7 @@ rock.addEventListener('click', () => {
 paper.addEventListener('click', () => {
     const randNum = Math.floor(Math.random() * ghostGuess.length);
     ghostGuessDisplay.textContent = ghostGuess[randNum];
-    // gameState = 'resultState';
+    gameState = 'resultsState';
     userGuess = 'paper';
     userGuessDisplay.textContent = 'paper';
 
@@ -56,10 +56,10 @@ paper.addEventListener('click', () => {
 scissors.addEventListener('click', () => {
     const randNum = Math.floor(Math.random() * ghostGuess.length);
     ghostGuessDisplay.textContent = ghostGuess[randNum];
-    // gameState = resultState;
+    gameState = 'resultsState';
     userGuess = 'scissors';
     userGuessDisplay.textContent = 'scissors';
-
+    displayResults();
     getResult();
 
     // inputsContainer.classList.toggle('hide');
@@ -68,9 +68,11 @@ scissors.addEventListener('click', () => {
 
 playAgain.addEventListener('click', () => {
     loadPage();
+    rePlay();
 });
 
 // function loadPage() {}
+
 function getResult() {
     if (ghostGuessDisplay.textContent === userGuess) {
         resultDisplay.textContent = 'its a draw!';
@@ -111,6 +113,23 @@ function getResult() {
 }
 /* Components */
 
+const guessSection = document.getElementById('guess-section');
+function displayGuess() {
+    if (gameState === 'guessState') {
+        guessSection.classList.remove('hidden');
+        resultsSection.classList.add('hidden');
+    }
+}
+
+const resultsSection = document.getElementById('results-section');
+
+function displayResults() {
+    if (gameState === 'resultsState') {
+        resultsSection.classList.remove('hidden');
+        guessSection.classList.add('hidden');
+    }
+}
+
 /* Component */
 const userWinsDisplay = document.getElementById('user-wins-display');
 const ghostWinsDisplay = document.getElementById('ghost-wins-display');
@@ -128,7 +147,7 @@ function displayScoreboard() {
 // event listeners
 
 /* Run page load code */
-// function playAgain() {
-//     // gameState = 'guess';
-//     loadPage();
-// }
+function rePlay() {
+    gameState = 'guessState';
+    loadPage();
+}

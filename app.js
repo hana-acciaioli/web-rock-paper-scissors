@@ -18,6 +18,8 @@ let ghostWins = 0;
 let draws = 0;
 // let totalGames;
 
+const playAgain = document.getElementById('play-again');
+
 const ghostGuess = ['rock', 'paper', 'scissors'];
 
 /* Actions */
@@ -64,6 +66,10 @@ scissors.addEventListener('click', () => {
     // fortuneContainer.classList.toggle('hide');
 });
 
+playAgain.addEventListener('click', () => {
+    loadPage();
+});
+
 // function loadPage() {}
 function getResult() {
     if (ghostGuessDisplay.textContent === userGuess) {
@@ -101,7 +107,7 @@ function getResult() {
         displayScoreboard();
         ghostWins++;
     }
-    // console.log('getResult');
+    loadPage();
 }
 /* Components */
 
@@ -109,20 +115,19 @@ function getResult() {
 const userWinsDisplay = document.getElementById('user-wins-display');
 const ghostWinsDisplay = document.getElementById('ghost-wins-display');
 const drawsDisplay = document.getElementById('draws-display');
-// const totalGamesDisplay = document.getElementById('total-games');
+const totalGamesDisplay = document.getElementById('total-games');
 
 function displayScoreboard() {
     userWinsDisplay.textContent = userWins;
     ghostWinsDisplay.textContent = ghostWins;
     drawsDisplay.textContent = draws;
-    // totalGamesDisplay.textContent = totalGames;
+    totalGamesDisplay.textContent = userWins + ghostWins + draws;
 }
 // get DOM
 // display
 // event listeners
 
 /* Run page load code */
-loadPage();
 // function playAgain() {
 //     // gameState = 'guess';
 //     loadPage();

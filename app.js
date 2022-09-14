@@ -1,8 +1,3 @@
-/* Imports */
-
-/* State */
-// let gameState = ''; // 'guess' or 'results' = '';
-
 const rock = document.getElementById('rock');
 const paper = document.getElementById('paper');
 const scissors = document.getElementById('scissors');
@@ -22,7 +17,6 @@ const playAgain = document.getElementById('play-again');
 
 const ghostGuess = ['rock', 'paper', 'scissors'];
 
-/* Actions */
 function loadPage() {
     displayGuess();
     displayResults();
@@ -37,8 +31,6 @@ rock.addEventListener('click', () => {
     userGuessDisplay.textContent = 'rock';
 
     getResult();
-    // inputsContainer.classList.toggle('hide');
-    // fortuneContainer.classList.toggle('hide');
 });
 
 paper.addEventListener('click', () => {
@@ -49,8 +41,6 @@ paper.addEventListener('click', () => {
     userGuessDisplay.textContent = 'paper';
 
     getResult();
-    // inputsContainer.classList.toggle('hide');
-    // fortuneContainer.classList.toggle('hide');
 });
 
 scissors.addEventListener('click', () => {
@@ -61,17 +51,12 @@ scissors.addEventListener('click', () => {
     userGuessDisplay.textContent = 'scissors';
     displayResults();
     getResult();
-
-    // inputsContainer.classList.toggle('hide');
-    // fortuneContainer.classList.toggle('hide');
 });
 
 playAgain.addEventListener('click', () => {
     loadPage();
     rePlay();
 });
-
-// function loadPage() {}
 
 function getResult() {
     if (ghostGuessDisplay.textContent === userGuess) {
@@ -111,7 +96,6 @@ function getResult() {
     }
     loadPage();
 }
-/* Components */
 
 const guessSection = document.getElementById('guess-section');
 function displayGuess() {
@@ -130,7 +114,6 @@ function displayResults() {
     }
 }
 
-/* Component */
 const userWinsDisplay = document.getElementById('user-wins-display');
 const ghostWinsDisplay = document.getElementById('ghost-wins-display');
 const drawsDisplay = document.getElementById('draws-display');
@@ -142,11 +125,7 @@ function displayScoreboard() {
     drawsDisplay.textContent = draws;
     totalGamesDisplay.textContent = userWins + ghostWins + draws;
 }
-// get DOM
-// display
-// event listeners
 
-/* Run page load code */
 function rePlay() {
     gameState = 'guessState';
     loadPage();

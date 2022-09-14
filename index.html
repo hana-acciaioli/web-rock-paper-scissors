@@ -34,23 +34,26 @@
                 <h2>Scoreboard</h2>
                 <p class="scoreboard">
                     user wins:
-                    <span id="flips-display"></span>
+                    <span id="user-display"></span>
                     ghost wins:
                     <span id="wins-display"></span>
                     draws:
                     <span id="draws-display"></span>
+                    total games:
+                    <span id="total-games"></span>
                 </p>
             </section>
-            <section id="guessState" class="hide">
+            <section id="userGuess">
                 <p>You choose..</p>
                 <button id="rock">rock</button>
                 <button id="paper">paper</button>
                 <button id="scissors">scissors</button>
             </section>
-            <section id="resultsState">
+            <section id="resultsState" class="hide">
                 <h2>Your Choice: <span id="user-guess-display"></span></h2>
                 <h2>Ghost Choice: <span id="ghost-guess-display"></span></h2>
-                <h2>Result: <span id="result"></span></h2>
+                <h2>Result: <span id="result-display"></span></h2>
+                <button>Play again</button>
             </section>
         </main>
     </body>

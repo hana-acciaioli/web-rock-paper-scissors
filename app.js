@@ -56,25 +56,25 @@ scissors.addEventListener('click', () => {
 
 // function loadPage() {}
 function getResult() {
-    if (ghostGuess === userGuess) {
+    if (ghostGuessDisplay.textContent === userGuess) {
         resultDisplay.textContent = 'its a draw!';
     }
-    if (ghostGuess === 'rock' && userGuess === 'paper') {
+    if (ghostGuessDisplay.textContent === 'rock' && userGuess === 'paper') {
         resultDisplay.textContent = 'you win!';
     }
-    if (ghostGuess === 'rock' && userGuess === 'scissors') {
+    if (ghostGuessDisplay.textContent === 'rock' && userGuess === 'scissors') {
         resultDisplay.textContent = 'ghost wins!';
     }
-    if (ghostGuess === 'paper' && userGuess === 'scissors') {
+    if (ghostGuessDisplay.textContent === 'paper' && userGuess === 'scissors') {
         resultDisplay.textContent = 'you win!';
     }
-    if (ghostGuess === 'paper' && userGuess === 'rock') {
+    if (ghostGuessDisplay.textContent === 'paper' && userGuess === 'rock') {
         resultDisplay.textContent = 'ghost wins!!';
     }
-    if (ghostGuess === 'scissors' && userGuess === 'rock') {
+    if (ghostGuessDisplay.textContent === 'scissors' && userGuess === 'rock') {
         resultDisplay.textContent.textContent = 'you win!';
     }
-    if (ghostGuess === 'scissors' && userGuess === 'paper') {
+    if (ghostGuessDisplay.textContent === 'scissors' && userGuess === 'paper') {
         resultDisplay.textContent = 'ghost wins!!';
     }
     // console.log('getResult');

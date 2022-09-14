@@ -49,7 +49,6 @@ scissors.addEventListener('click', () => {
     gameState = 'resultsState';
     userGuess = 'scissors';
     userGuessDisplay.textContent = 'scissors';
-    displayResults();
     getResult();
 });
 

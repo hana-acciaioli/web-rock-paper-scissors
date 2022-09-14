@@ -15,9 +15,7 @@ body {
 header {
     position: sticky;
     top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
     background-color: midnightblue;
     color: white;
     background-image: url(https://pa1.narvii.com/7325/25aabeeb47706e594beb47a2e1308718cbd6e76dr1-480-480_hq.gif);
@@ -26,9 +24,9 @@ header {
     line-height: 20ox;
 }
 
-header img {
+.header-img {
     contain: content;
-    display: flex;
+    background-image: url(https://pa1.narvii.com/7325/25aabeeb47706e594beb47a2e1308718cbd6e76dr1-480-480_hq.gif);
     justify-content: center;
     gap: 15px;
 }
@@ -72,4 +70,9 @@ button {
 user-guess img {
     flex: 1fr 1fr 1fr;
     /* align-content: center; */
+}
+
+.rock {
+    width: 100px;
+    height: 100px;
 }

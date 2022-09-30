@@ -15,11 +15,64 @@ body {
 header {
     position: sticky;
     top: 0;
-    display: flex;
-    align-items: center;
-    background-color: var(--header-background);
+    text-align: center;
+    background-color: midnightblue;
+    color: white;
+    background-image: url(https://pa1.narvii.com/7325/25aabeeb47706e594beb47a2e1308718cbd6e76dr1-480-480_hq.gif);
+    height: 300px;
+    position: relative;
+    line-height: 20ox;
+}
+
+.header-img {
+    contain: content;
+    background-image: url(https://pa1.narvii.com/7325/25aabeeb47706e594beb47a2e1308718cbd6e76dr1-480-480_hq.gif);
+    justify-content: center;
+    gap: 15px;
 }
 
 main {
     padding: 20px;
+    color: rgb(157, 192, 235);
+    background: linear-gradient(to bottom, midnightblue 0%, #ff99cc 100%);
+}
+
+.hidden {
+    display: none !important;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+}
+
+.interaction {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    align-self: center;
+}
+
+img {
+    background-color: cyan;
+    background: rgb(224, 234, 247);
+}
+
+button {
+    color: blue;
+}
+user-guess img {
+    flex: 1fr 1fr 1fr;
+    /* align-content: center; */
+}
+
+.rock {
+    width: 100px;
+    height: 100px;
 }
